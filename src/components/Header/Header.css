@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #1c1c1c, #3a3a3a);
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px; /* Adjust height as needed */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between navigation items */
+  padding: 0;
+}
+
+.nav li {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav li:hover {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid white; /* To highlight the active item */
+}

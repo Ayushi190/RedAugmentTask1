@@ -1,0 +1,319 @@
+/* Services.css */
+.services-container {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+  padding: 0 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  background-color: #e22c2c;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  border-radius: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Main content styling */
+.services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.services-content h1 {
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Search styling */
+.search-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.arrow-right {
+  font-size: 1.5rem;
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Filter tags styling */
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.filter-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Featured services */
+.featured-services {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  gap: 2rem;
+}
+
+.featured-services > :last-child {
+  grid-column: 1 / -1;
+}
+
+.featured-service-card {
+  height: 300px;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden; /* Ensures image stays within rounded corners */
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.card-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.card-content-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.dark-gradient {
+  align-items: baseline;
+  background-color: #1a1a2e;
+  background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.purple-gradient {
+  align-items: baseline;
+  background-color: #4c11ac;
+  background-image: linear-gradient(135deg, #4c11ac 0%, #8a2be2 100%);
+}
+
+.featured-service-card:hover {
+  transform: translateY(-5px);
+}
+
+.featured-service-card h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  line-height: 1.2; /* Better for multi-line titles */
+}
+
+.service-description {
+  font-size: 1rem; /* Adjusted font size */
+  font-weight: normal; /* Font weight */
+  color: white; /* Text color */
+  margin-top: 0.5rem; /* Space between title and description */
+  opacity: 0.8; /* Slightly reduced opacity for a softer look */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .services-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .featured-services {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-tags {
+    flex-direction: column;
+  }
+
+  .services-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Add these styles to your existing CSS */
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  min-width: 160px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #888;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+/* Material Icons base styling */
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px; /* Adjust size as needed */
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex; /* Better alignment */
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dropdown-specific icon styles */
+.dropdown-icon {
+  margin-right: 12px;
+  color: #888; /* Match your existing link color */
+  transition: color 0.3s ease;
+  font-size: 18px;
+  width: 20px; /* Fixed width for alignment */
+  text-align: center;
+}
+
+.dropdown-content a:hover .dropdown-icon {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust dropdown item padding */
+.dropdown-content a {
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
+  display: flex;
+  align-items: center;
+}
